@@ -1,5 +1,9 @@
 console.log('Hello coconico')
 
-import initializeApp from "./app";
+import launchApp from "./tabs/launchApp"
 
-initializeApp();
+launchApp()
+
+// import initializeApp from "./applaunch";
+
+// initializeApp();
