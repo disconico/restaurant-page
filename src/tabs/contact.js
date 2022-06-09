@@ -37,10 +37,13 @@ function creteInfoDiv () {
 
 
 function createFormDiv () {
+    
     const main = document.querySelector('main')
     const contactForm = document.createElement('div')
     contactForm.classList.add('contact--form--div')
     main.appendChild(contactForm)
+
+    
 
     const formDivTitle = document.createElement('h3')
     formDivTitle.innerText = 'Contattateci :'
@@ -48,6 +51,7 @@ function createFormDiv () {
 
     const form = document.createElement('form')
     form.action = 'post'
+    form.classList.add('form')
     contactForm.appendChild(form)
 
     const firstName = document.createElement('div')
@@ -58,6 +62,8 @@ function createFormDiv () {
     firstNameLabel.setAttribute('for', 'firstName')
     firstNameLabel.innerText = 'First name :'
     firstName.appendChild(firstNameLabel)
+    const BRFirst = document.createElement('br')
+    firstName.appendChild(BRFirst)
 
     const firstNameInput = document.createElement('input')
     firstNameInput.type = 'text'
@@ -73,6 +79,8 @@ function createFormDiv () {
     lastNameLabel.setAttribute('for', 'lastName')
     lastNameLabel.innerText = 'Last name :'
     lastName.appendChild(lastNameLabel)
+    const BRLast = document.createElement('br')
+    lastName.appendChild(BRLast)
 
     const lastNameInput = document.createElement('input')
     lastNameInput.type = 'text'
@@ -88,6 +96,8 @@ function createFormDiv () {
     userPhoneLabel.setAttribute('for', 'userPhone')
     userPhoneLabel.innerText = 'Phone number :'
     userPhone.appendChild(userPhoneLabel)
+    const BRPhone = document.createElement('br')
+    userPhone.appendChild(BRPhone)
 
     const userPhoneInput = document.createElement('input')
     userPhoneInput.type = 'phone'
@@ -103,6 +113,8 @@ function createFormDiv () {
     userEmailLabel.setAttribute('for', 'userEmail')
     userEmailLabel.innerText = 'E-mail address :'
     userEmail.appendChild(userEmailLabel)
+    const BREmail = document.createElement('br')
+    userEmail.appendChild(BREmail)
 
     const userEmailInput = document.createElement('input')
     userEmailInput.type = 'email'
@@ -118,14 +130,13 @@ function createFormDiv () {
     userMsgLabel.setAttribute('for', 'userMsg')
     userMsgLabel.innerText = 'Your message :'
     userMsg.appendChild(userMsgLabel)
-
-    const userMsgBr = document.createElement('br')
-    userMsg.appendChild(userMsgBr)
+    const BRMsg = document.createElement('br')
+    userMsg.appendChild(BRMsg)
 
     const userMsgInput = document.createElement('textarea')
     userMsgInput.id = 'userMsg'
     userMsgInput.placeholder = 'Tell us everything :)'
-    userMsgInput.setAttribute('rows','5','cols','33')
+    userMsgInput.setAttribute('rows','5')
     userMsg.appendChild(userMsgInput)
 
     const userSubmit = document.createElement('div')

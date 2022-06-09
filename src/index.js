@@ -12,8 +12,7 @@ body.appendChild(content)
 const head = document.querySelector('head')
 head.appendChild(style)
 
-
-
 import {launchApp} from "./tabs/launchApp"
 
 launchApp()
+

@@ -10,7 +10,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     sourceMapFilename: "main.js.map",
-    // clean: true,
+    clean: true,
   },
   module: {
     rules: [

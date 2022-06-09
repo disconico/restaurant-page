@@ -1,4 +1,5 @@
 import { loadMenu } from "./menu"
+// import {load} from "./load"
 
 function createTabHead (textP, textH1, textHR, textP2)  {
     const tabHead = document.createElement('div')
@@ -33,8 +34,19 @@ function createButton(text) {
 
     const button = document.createElement('button')
     button.type = 'button'
+    button.classList.add('go--to--menu')
     button.innerText = text
     button.addEventListener('click', loadMenu)
+
+    function load () {
+        const casa = document.getElementById('home')
+        casa.classList.remove('active')
+
+        const menu = document.getElementById('menu')
+        menu.classList.add('active')
+    }
+
+    button.addEventListener('click', load)
 
     return button
 }
@@ -49,8 +61,6 @@ function createHome() {
 
     return home
 }
-
-
 
 
 function loadHome() {
