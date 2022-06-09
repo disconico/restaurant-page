@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+
 :root {
     --golden-color : #c59d5f
 }
@@ -6,6 +8,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -20,36 +23,168 @@ li {
 #content {
     height: 100vh;
     width: 100vw;
-    background: url(../assets/images/background.jpeg);
+    background: url(../assets/images/background3.jpeg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     box-sizing: border-box;
 }
 
+
+/* Header */
 .header {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid var(--golden-color);
+    border-bottom: 3px solid var(--golden-color);
 }
 
 .nav--bar {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     justify-content: center;
 }
 
+.button--nav {
+    font-family: "Montserrat", sans-serif;
+    width: 110px;
+    padding: 5px;
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.button--nav:hover {
+    border-bottom: 2px solid var(--golden-color);
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.nav--bar .active {
+    border-bottom: 2px solid var(--golden-color);
+    padding-bottom: 10px;  
+}
+
+/* Main */
 .main {
   
     padding: 0;
+    margin: 0;
 }
 
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tab--head--p {
+    color: var(--golden-color);
+    font-family: "Herr Von Muellerhoff", 'cursive';
+    font-size: 96px;
+    text-transform: capitalize;
+    line-height: 150%;
+    margin: 0;
+  
+}
+
+.tab--head--h1 {
+    color: black;
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: -72px;
+    text-transform: uppercase;
+}
+
+.tab--head--hr {
+    width: 280px;
+    border: 2px solid #c59d5f;
+    margin: 24px auto;
+}
+
+.tab--head--p2 {
+    line-height: 150%;
+    color: whitesmoke;
+}
+
+/* Home */
+.home {
+    height: 100%;
+}
+
+.home .tab--head--h1 {
+    color:whitesmoke;
+}
+
+.home button {
+    cursor: pointer;
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+    padding: 16px;
+    background: #c59d5f;
+    font-size: 16px;
+    border: none;
+}
+
+.home button:hover {
+    text-shadow: 0 0 10px var(--golden-color),
+        0 0 50px var(--golden-color),
+        0 0 50px var(--golden-color),
+        0 0 300px var(--golden-color);
+    transition: 0.3s;
+    background-color: #d59940;
+    color: whitesmoke;
+}
+
+/* Menu */
+.menu--item {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item--price,
+.item--name {
+    color: var(--golden-color);
+    margin: 8px;
+}
+
+.item--text {
+    line-height: 150%;
+}
+
+.item--hr {
+    border: 1px solid var(--golden-color);
+    width: 280px;
+}
+
+/* About */
+
+.about--text {
+    line-height: 150%;
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+}
+
+/* Contact */
+
+.restaurant--map {
+    box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Footer */
 .footer {
     height: 60px;
     display: flex;
@@ -57,7 +192,7 @@ li {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    border-top: 3px solid var(--golden-color);
 }
 
 .footer img {

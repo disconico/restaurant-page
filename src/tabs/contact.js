@@ -9,7 +9,7 @@ function creteInfoDiv () {
     main.appendChild(infoDiv)
 
     const infoDivTitle = document.createElement('h3')
-    infoDivTitle.innerText = 'Our infos :'
+    infoDivTitle.innerText = 'Le nostre informazioni :'
     infoDiv.appendChild(infoDivTitle)
 
     const phoneNbr = document.createElement('p')
@@ -27,7 +27,7 @@ function creteInfoDiv () {
     restaurantMap.width = '400'
     restaurantMap.height = '250'
     restaurantMap.setAttribute('loading', 'lazy')
-    restaurantMap.style.border = '1px solid black'
+    restaurantMap.style.border = '1px solid grey'
     restaurantMap.allowFullscreen = ''
     restaurantMap.classList.add('restaurant--map')
     infoDiv.appendChild(restaurantMap)
@@ -43,7 +43,7 @@ function createFormDiv () {
     main.appendChild(contactForm)
 
     const formDivTitle = document.createElement('h3')
-    formDivTitle.innerText = 'Contact us :'
+    formDivTitle.innerText = 'Contattateci :'
     contactForm.appendChild(formDivTitle)
 
     const form = document.createElement('form')
@@ -152,7 +152,7 @@ function loadContact () {
     main.classList.add('main--contact')
     main.classList.toggle('active')
 
-    const menuTabHead = createTabHead('Bienvenue', 'Contact & infos')
+    const menuTabHead = createTabHead('Benvenuti', 'CCONTATTI & INFO')
     main.appendChild(menuTabHead)
 
     creteInfoDiv()

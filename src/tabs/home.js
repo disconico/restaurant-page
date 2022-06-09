@@ -1,24 +1,36 @@
 import { loadMenu } from "./menu"
 
-function createTabHead (textP, textH1, textHR)  {
+function createTabHead (textP, textH1, textHR, textP2)  {
     const tabHead = document.createElement('div')
+    tabHead.classList.add('tab--head')
 
     const paragraph = document.createElement('p')
     paragraph.textContent = textP
+    paragraph.classList.add('tab--head--p')
     tabHead.appendChild(paragraph)
 
     const H1 = document.createElement('h1')
     H1.textContent = textH1
+    H1.classList.add('tab--head--h1')
     tabHead.appendChild(H1)
 
     const HR = document.createElement('hr')
     HR.textContent = ""
+    HR.classList.add('tab--head--hr')
     tabHead.appendChild(HR)
+
+    const paragraph2 = document.createElement('p')
+    paragraph2.textContent = textP2
+    paragraph2.classList.add('tab--head--p2')
+    tabHead.appendChild(paragraph2)
+
 
     return tabHead
 }
 
 function createButton(text) {
+
+
     const button = document.createElement('button')
     button.type = 'button'
     button.innerText = text
@@ -31,8 +43,9 @@ function createHome() {
     const home = document.createElement('div')
     home.classList.add('home')
 
-    home.appendChild(createTabHead('Bienvenue','Home'))
-    home.appendChild(createButton('Voir le menu'))
+    home.appendChild(createTabHead('Benvenuti','La buona cucina','','I migliori posti dove mangiare a Montcuq'))
+    
+    home.appendChild(createButton('Vedere il menu'))
 
     return home
 }

@@ -5,19 +5,19 @@ const menu = [
       name: "Pan canilla",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
-      price: "20$",
+      price: "€20",
     },
     {
       name: "Pan sobado",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
-      price: "20$",
+      price: "€20",
     },
     {
       name: "Pan Andino",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
-      price: "20$",
+      price: "€20",
     },
   ];
 
@@ -28,7 +28,7 @@ function loadMenu() {
     main.classList.remove('main--contact')
     main.classList.add('main--menu')
     
-    const menuTabHead = createTabHead('Bienvenue', 'Menu')
+    const menuTabHead = createTabHead('Benvenuti', 'Menu')
     main.appendChild(menuTabHead)
 
     menu.forEach((item) => {
