@@ -1,5 +1,10 @@
+// imports
+import {loadHome} from "./home"
+import {loadMenu} from "./menu"
+import {loadAbout} from "./about"
+import {loadContact} from "./contact"
 
-
+// launchApp.js
 function createHeader() {
     const header = document.createElement('header')
     header.classList.add('header')
@@ -11,29 +16,29 @@ function createHeader() {
     const homeButton = document.createElement("button")
     homeButton.classList.add('button-nav')
     homeButton.textContent = 'Home'
-    homeButton.addEventListener('click', (e) => {
-        //Write code here
+    homeButton.addEventListener('click', () => {
+        loadHome()
     })
 
     const menuButton = document.createElement("button")
     menuButton.classList.add('button-nav')
     menuButton.textContent = 'Menu'
-    menuButton.addEventListener('click', (e) => {
-        //Write code here
+    menuButton.addEventListener('click', () => {
+        loadMenu()
     })
 
     const aboutButton = document.createElement("button")
     aboutButton.classList.add('button-nav')
     aboutButton.textContent = 'About'
-    aboutButton.addEventListener('click', (e) => {
-        //Write code here
+    aboutButton.addEventListener('click', () => {
+        loadAbout()
     })
 
     const contactButton = document.createElement("button")
     contactButton.classList.add('button-nav')
     contactButton.textContent = 'Contact'
-    contactButton.addEventListener('click', (e) => {
-        //Write code here
+    contactButton.addEventListener('click', () => {
+        loadContact()
     })
 
     navBar.appendChild(homeButton)
@@ -82,6 +87,8 @@ function launchApp() {
     content.appendChild(createHeader())
     content.appendChild(createMain())
     content.appendChild(createFooter())
+
+    loadContact()
 }
 
-export default launchApp
+export {launchApp}

@@ -1,9 +1,19 @@
-console.log('Hello coconico')
+const content = document.createElement('div')
+content.classList.add('content')
+content.setAttribute('id','content')
 
-import launchApp from "./tabs/launchApp"
+const style = document.createElement('link')
+style.rel = 'stylesheet'
+style.href = '../src/styles/style.css'
+
+const body = document.querySelector('body')
+body.appendChild(content)
+
+const head = document.querySelector('head')
+head.appendChild(style)
+
+
+
+import {launchApp} from "./tabs/launchApp"
 
 launchApp()
-
-// import initializeApp from "./applaunch";
-
-// initializeApp();

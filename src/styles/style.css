@@ -1,3 +1,7 @@
+:root {
+    --golden-color : #c59d5f
+}
+
 html,
 body {
     margin: 0;
@@ -14,10 +18,25 @@ li {
 }
 
 #content {
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    background: url(../assets/images/background.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     box-sizing: border-box;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--golden-color);
 }
 
 .nav--bar {
@@ -26,9 +45,15 @@ li {
     justify-content: center;
 }
 
+.main {
+  
+    padding: 0;
+}
+
 .footer {
+    height: 60px;
     display: flex;
-    color: black;
+    color:whitesmoke;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -37,8 +62,19 @@ li {
 
 .footer img {
     transition: transform 0.25s ease-in-out;
+    height: 22px;
+
 }
 
 .footer img:hover {
     transform: rotate(360deg) scale(1.3);
+}
+
+/* Menu */
+
+.main--menu,
+.main--contact,
+.main--about {
+    background-color:  rgba(245,245, 245);
+    overflow: scroll;
 }
