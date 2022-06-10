@@ -34,7 +34,6 @@ li {
     box-sizing: border-box;
 }
 
-
 /* Header */
 .header {
     height: 80px;
@@ -238,15 +237,12 @@ textarea {
     background-color: #d59940;
     color: whitesmoke;
     cursor: pointer;
-
 }
 
 .user--submit>button:active {
     background-color: var(--golden-color);
     cursor: pointer;
 }
-
-
 
 /* Footer */
 .footer {
@@ -260,9 +256,10 @@ textarea {
 }
 
 .footer img {
+    
     transition: transform 0.25s ease-in-out;
     height: 22px;
-
+    content: url(./assets/images/github-icon.png);
 }
 
 .footer img:hover {
@@ -282,14 +279,11 @@ textarea {
     .button--nav {
         width: calc(100vw / 5);
     }
-
     .main {
         max-width: 100vw;
         word-wrap: break-word;
-       
     }
     .restaurant--map {
 width: 300px;
     }
-    
 }
