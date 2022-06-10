@@ -22,6 +22,11 @@ function creteInfoDiv () {
     restaurantLocation.innerText = "🏠   1 Rue du Prêche, 46800 Montcuq"
     infoDiv.appendChild(restaurantLocation)
 
+    const restaurantHours = document.createElement('p')
+    restaurantHours.classList.add('opening--hours')
+    restaurantHours.innerText = "🕰   Da martedì a domenica, dalle 11.00 alle 23.00"
+    infoDiv.appendChild(restaurantHours)
+
     const restaurantMap = document.createElement('iframe')
     restaurantMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.6185003276487!2d1.2080284510136101!3d44.33834401577153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ab80976fd9b0dd%3A0xb33eeb238647aaff!2sMairie!5e0!3m2!1sfr!2sfr!4v1654776443056!5m2!1sfr!2sfr'
     restaurantMap.width = '400'
@@ -60,7 +65,7 @@ function createFormDiv () {
 
     const firstNameLabel = document.createElement('label')
     firstNameLabel.setAttribute('for', 'firstName')
-    firstNameLabel.innerText = 'First name :'
+    firstNameLabel.innerText = 'Nome :'
     firstName.appendChild(firstNameLabel)
     const BRFirst = document.createElement('br')
     firstName.appendChild(BRFirst)
@@ -77,7 +82,7 @@ function createFormDiv () {
 
     const lastNameLabel = document.createElement('label')
     lastNameLabel.setAttribute('for', 'lastName')
-    lastNameLabel.innerText = 'Last name :'
+    lastNameLabel.innerText = 'Cognome :'
     lastName.appendChild(lastNameLabel)
     const BRLast = document.createElement('br')
     lastName.appendChild(BRLast)
@@ -94,7 +99,7 @@ function createFormDiv () {
 
     const userPhoneLabel = document.createElement('label')
     userPhoneLabel.setAttribute('for', 'userPhone')
-    userPhoneLabel.innerText = 'Phone number :'
+    userPhoneLabel.innerText = 'Numero di telefono :'
     userPhone.appendChild(userPhoneLabel)
     const BRPhone = document.createElement('br')
     userPhone.appendChild(BRPhone)
@@ -111,7 +116,7 @@ function createFormDiv () {
 
     const userEmailLabel = document.createElement('label')
     userEmailLabel.setAttribute('for', 'userEmail')
-    userEmailLabel.innerText = 'E-mail address :'
+    userEmailLabel.innerText = 'Indirizzo e-mail :'
     userEmail.appendChild(userEmailLabel)
     const BREmail = document.createElement('br')
     userEmail.appendChild(BREmail)
@@ -128,14 +133,14 @@ function createFormDiv () {
 
     const userMsgLabel = document.createElement('label')
     userMsgLabel.setAttribute('for', 'userMsg')
-    userMsgLabel.innerText = 'Your message :'
+    userMsgLabel.innerText = 'Il vostro messaggio :'
     userMsg.appendChild(userMsgLabel)
     const BRMsg = document.createElement('br')
     userMsg.appendChild(BRMsg)
 
     const userMsgInput = document.createElement('textarea')
     userMsgInput.id = 'userMsg'
-    userMsgInput.placeholder = 'Tell us everything :)'
+    userMsgInput.placeholder = '...'
     userMsgInput.setAttribute('rows','5')
     userMsg.appendChild(userMsgInput)
 

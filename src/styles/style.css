@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
 
 :root {
-    --golden-color : #c59d5f
+    --golden-color: #c59d5f
 }
 
 html,
@@ -14,6 +14,11 @@ body {
 body {
     min-height: 100vh;
     text-align: center;
+    background: url(../assets/images/background3.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 li {
@@ -23,12 +28,7 @@ li {
 #content {
     height: 100vh;
     width: 100vw;
-    background: url(../assets/images/background3.jpeg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* background-position: center; */
+   
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     box-sizing: border-box;
@@ -70,12 +70,12 @@ li {
 
 .nav--bar .active {
     border-bottom: 2px solid var(--golden-color);
-    padding-bottom: 10px;  
+    padding-bottom: 10px;
 }
 
 /* Main */
 .main {
-  
+
     padding: 0;
     margin: 0;
 }
@@ -94,7 +94,7 @@ li {
     text-transform: capitalize;
     line-height: 150%;
     margin: 0;
-  
+
 }
 
 .tab--head--h1 {
@@ -122,11 +122,11 @@ li {
 }
 
 .home .tab--head--h1 {
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 .home button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
     margin-bottom: 8px;
     padding: 16px;
@@ -191,18 +191,29 @@ li {
 form {
     line-height: 1.8;
     text-align: start;
-  }
-
-  .form input,
-  textarea {
-  background-color: #FFFFFF;
-  border: 1px solid #D6D9DC;
-  border-radius: 3px;
-  width: 90%;
-  padding: 7px;
-  font-size: 14px;
-  margin-bottom: 1rem;
 }
+
+.form input,
+textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 90%;
+    padding: 7px;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    margin-top: 2px;
+}
+
+.form input:focus{
+    outline:none;
+    /* outline:2px; */
+    border: 2px solid var(--golden-color);
+    /* border-color: var(--golden-color); */
+    /* box-shadow: 0 0 10px var(--golden-color)); */
+
+}
+
 .user--submit {
     display: flex;
     justify-content: center;
@@ -220,32 +231,32 @@ form {
     border-radius: 3px;
     font-size: 15px;
     padding: 5px;
-  }
+}
 
-  .user--submit>button:hover {
+.user--submit>button:hover {
     text-shadow: 0 0 10px var(--golden-color),
-    0 0 50px var(--golden-color),
-    0 0 50px var(--golden-color),
-    0 0 300px var(--golden-color);
-transition: 0.3s;
-background-color: #d59940;
-color: whitesmoke;
-cursor: pointer;
-  
-  }
-  
-  .user--submit>button:active {
+        0 0 50px var(--golden-color),
+        0 0 50px var(--golden-color),
+        0 0 300px var(--golden-color);
+    transition: 0.3s;
+    background-color: #d59940;
+    color: whitesmoke;
+    cursor: pointer;
+
+}
+
+.user--submit>button:active {
     background-color: var(--golden-color);
     cursor: pointer;
-  }
-  
+}
+
 
 
 /* Footer */
 .footer {
     height: 60px;
     display: flex;
-    color:whitesmoke;
+    color: whitesmoke;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -267,6 +278,22 @@ cursor: pointer;
 .main--menu,
 .main--contact,
 .main--about {
-    background-color:  rgba(245,245, 245);
+    background-color: rgba(245, 245, 245);
     overflow: scroll;
+}
+
+@media (max-width: 600px) {
+    .button--nav {
+        width: calc(100vw / 5);
+    }
+
+    .main {
+        max-width: 100vw;
+        word-wrap: break-word;
+       
+    }
+    .restaurant--map {
+width: 300px;
+    }
+    
 }
