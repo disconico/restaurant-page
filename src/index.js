@@ -4,7 +4,7 @@ content.setAttribute('id','content')
 
 const style = document.createElement('link')
 style.rel = 'stylesheet'
-style.href = '/src/style.css'
+style.href = '../dist/style.css'
 
 const body = document.querySelector('body')
 body.appendChild(content)
