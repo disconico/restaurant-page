@@ -1,7 +1,7 @@
 import { loadMenu } from "./menu"
 // import {load} from "./load"
 
-function createTabHead (textP, textH1, textHR, textP2)  {
+function createTabHead(textP, textH1, textHR, textP2) {
     const tabHead = document.createElement('div')
     tabHead.classList.add('tab--head')
 
@@ -37,7 +37,7 @@ function createButton(text) {
     button.innerText = text
     button.addEventListener('click', loadMenu)
 
-    function load () {
+    function load() {
         const casa = document.getElementById('home')
         casa.classList.remove('active')
 
@@ -54,8 +54,8 @@ function createHome() {
     const home = document.createElement('div')
     home.classList.add('home')
 
-    home.appendChild(createTabHead('Benvenuti','La buona cucina','','I migliori posti dove mangiare a Montcuq'))
-    
+    home.appendChild(createTabHead('Benvenuti', 'La buona cucina', '', 'I migliori posti dove mangiare a Montcuq'))
+
     home.appendChild(createButton('Vedere il menu'))
 
     return home
@@ -72,5 +72,5 @@ function loadHome() {
 
 }
 
-export {createTabHead} 
-export {loadHome}
+export { createTabHead }
+export { loadHome }
