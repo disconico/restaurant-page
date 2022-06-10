@@ -1,8 +1,6 @@
-import {createTabHead} from "./home"   
+import { createTabHead } from "./home"
 
-
-
-function creteInfoDiv () {
+function creteInfoDiv() {
     const main = document.querySelector('main')
     const infoDiv = document.createElement('div')
     infoDiv.classList.add('info--div')
@@ -41,14 +39,14 @@ function creteInfoDiv () {
 
 
 
-function createFormDiv () {
-    
+function createFormDiv() {
+
     const main = document.querySelector('main')
     const contactForm = document.createElement('div')
     contactForm.classList.add('contact--form--div')
     main.appendChild(contactForm)
 
-    
+
 
     const formDivTitle = document.createElement('h3')
     formDivTitle.innerText = 'Contattateci :'
@@ -141,7 +139,7 @@ function createFormDiv () {
     const userMsgInput = document.createElement('textarea')
     userMsgInput.id = 'userMsg'
     userMsgInput.placeholder = '...'
-    userMsgInput.setAttribute('rows','5')
+    userMsgInput.setAttribute('rows', '5')
     userMsg.appendChild(userMsgInput)
 
     const userSubmit = document.createElement('div')
@@ -149,7 +147,7 @@ function createFormDiv () {
     form.appendChild(userSubmit)
 
     const submitBtn = document.createElement('button')
-    submitBtn.classList.add ('submit--button')
+    submitBtn.classList.add('submit--button')
     submitBtn.type = 'button'
     submitBtn.innerText = 'Send your message'
     userSubmit.appendChild(submitBtn)
@@ -157,10 +155,7 @@ function createFormDiv () {
 
 }
 
-
-
-
-function loadContact () {
+function loadContact() {
     const main = document.querySelector('main')
     main.textContent = ""
     main.classList.remove('main--menu')
@@ -175,6 +170,5 @@ function loadContact () {
     createFormDiv()
 }
 
-export {loadContact}
+export { loadContact }
 
-     

@@ -25,7 +25,6 @@ function createTabHead (textP, textH1, textHR, textP2)  {
     paragraph2.classList.add('tab--head--p2')
     tabHead.appendChild(paragraph2)
 
-
     return tabHead
 }
 

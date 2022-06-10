@@ -80,7 +80,6 @@ function createMain() {
     return main
 }
 
-
 function createFooter() {
     const footer = document.createElement('footer')
     footer.classList.add('footer')
@@ -95,7 +94,7 @@ function createFooter() {
 
     const footerIcon = document.createElement('img')
     footerIcon.setAttribute('id', 'github-icon')
-    footerIcon.setAttribute('src', '../src/assets/images/github-icon.png')
+    footerIcon.setAttribute('src', '../dist/assets/images/github-icon.png')
 
     footerLink.appendChild(footerIcon)
 
@@ -115,7 +114,6 @@ function launchApp() {
     setActiveButton(document.querySelector(".button--nav"));
 
     loadHome()
-
 }
 
 export { launchApp }
