@@ -14,7 +14,7 @@ body {
 body {
     min-height: 100vh;
     text-align: center;
-    background: url(../src/assets/images/background3.jpeg);
+    background: url(./assets/images/background3.jpeg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -207,11 +207,7 @@ textarea {
 
 .form input:focus{
     outline:none;
-    /* outline:2px; */
     border: 2px solid var(--golden-color);
-    /* border-color: var(--golden-color); */
-    /* box-shadow: 0 0 10px var(--golden-color)); */
-
 }
 
 .user--submit {
