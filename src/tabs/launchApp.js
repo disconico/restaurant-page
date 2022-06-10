@@ -94,7 +94,7 @@ function createFooter() {
 
     const footerIcon = document.createElement('img')
     footerIcon.setAttribute('id', 'github-icon')
-    footerIcon.setAttribute('src', './dist/assets/images/github-icon.png')
+    footerIcon.setAttribute('src', './assets/images/github-icon.png')
 
     footerLink.appendChild(footerIcon)
 
