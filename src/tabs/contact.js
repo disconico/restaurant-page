@@ -168,7 +168,7 @@ function loadContact () {
     main.classList.add('main--contact')
     main.classList.toggle('active')
 
-    const menuTabHead = createTabHead('Benvenuti', 'CCONTATTI & INFO')
+    const menuTabHead = createTabHead('Benvenuti', 'CONTATTI & INFO')
     main.appendChild(menuTabHead)
 
     creteInfoDiv()
